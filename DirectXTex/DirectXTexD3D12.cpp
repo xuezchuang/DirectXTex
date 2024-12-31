@@ -30,6 +30,8 @@
 #include "d3dx12.h"
 #endif
 
+
+
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -95,10 +95,11 @@
     <GenerateManifest>true</GenerateManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
-    <OutDir>Bin\Desktop_2022\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(SolutionDir)Binaries\Win64\</OutDir>
     <IntDir>Bin\Desktop_2022\$(Platform)\$(Configuration)\</IntDir>
     <TargetName>DirectXTex</TargetName>
     <GenerateManifest>true</GenerateManifest>
+    <UseStructuredOutput>false</UseStructuredOutput>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>Bin\Desktop_2022\$(Platform)\$(Configuration)\</OutDir>
@@ -165,7 +166,7 @@
       <OpenMPSupport>true</OpenMPSupport>
       <FloatingPointModel>Fast</FloatingPointModel>
       <AdditionalOptions>/Zc:twoPhase- /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
-      <PreprocessorDefinitions>_UNICODE;UNICODE;WIN32;_DEBUG;_LIB;_WIN7_PLATFORM_UPDATE;_WIN32_WINNT=0x0601;_CRT_STDIO_ARBITRARY_WIDE_SPECIFIERS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_UNICODE;UNICODE;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>DirectXTexP.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)Shaders\Compiled;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -298,6 +299,7 @@
     <ClCompile Include="BC4BC5.cpp" />
     <ClCompile Include="BC6HBC7.cpp" />
     <ClInclude Include="BCDirectCompute.h" />
+    <ClInclude Include="d3dx12.h" />
     <CLInclude Include="DDS.h" />
     <ClInclude Include="filters.h" />
     <CLInclude Include="scoped.h" />
@@ -309,6 +311,7 @@
     <ClCompile Include="DirectXTexCompressGPU.cpp" />
     <ClCompile Include="DirectXTexConvert.cpp" />
     <ClCompile Include="DirectXTexD3D11.cpp" />
+    <ClCompile Include="DirectXTexD3D12.cpp" />
     <ClCompile Include="DirectXTexDDS.cpp" />
     <ClCompile Include="DirectXTexFlipRotate.cpp" />
     <ClCompile Include="DirectXTexHDR.cpp" />
